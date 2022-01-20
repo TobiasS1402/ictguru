@@ -2,7 +2,6 @@
 id: 26
 title: Cisco Cheatsheet
 date: 2020-03-04T23:06:55+01:00
-author: gurutobias
 layout: page
 ---
 Configuratie Modus:
