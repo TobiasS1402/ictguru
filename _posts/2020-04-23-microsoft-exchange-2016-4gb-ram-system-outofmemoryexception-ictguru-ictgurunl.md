@@ -7,7 +7,6 @@ guid: http://ictguru.nl/?p=70
 permalink: /microsoft-exchange-2016-4gb-ram-system-outofmemoryexception-ictguru-ictgurunl/
 image: /wp-content/uploads/2020/04/external-content.duckduckgo.com_.jpg
 categories:
-  - Blogposts
   - Microsoft
 ---
 I was doing some exercises for school with exchange server 2016 when i had a fun idea, i was wondering what would happen with 4gb of RAM. The bare minimun is 8GB of ram to get past the prerequisites. On 8GB it ran quite well, so i wondered: what would happen? what **could** happen?
@@ -15,11 +14,11 @@ I was doing some exercises for school with exchange server 2016 when i had a fun
 ## Testing Exchange 2016 with 4GB RAM
 
 <div class="wp-block-image">
-  <figure class="alignright size-large"><img loading="lazy" width="918" height="200" src="https://ictguru.nl/wp-content/uploads/2020/04/ram.png" alt="" class="wp-image-71" srcset="https://ictguru.nl/wp-content/uploads/2020/04/ram.png 918w, https://ictguru.nl/wp-content/uploads/2020/04/ram-300x65.png 300w, https://ictguru.nl/wp-content/uploads/2020/04/ram-768x167.png 768w" sizes="(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px" /><figcaption>Hyper-V status for &#8216;Mail1&#8217;, It is asking for 10GB of RAM while 4GB of RAM has been assigned.</figcaption></figure>
+  <figure class="alignright size-large"><img loading="lazy" width="918" height="200" src="https://ictguru.nl/wp-content/uploads/2020/04/ram.png"/><figcaption>Hyper-V status for &#8216;Mail1&#8217;, It is asking for 10GB of RAM while 4GB of RAM has been assigned.</figcaption></figure>
 </div>
 
 <div class="wp-block-image">
-  <figure class="alignleft size-large"><img loading="lazy" width="702" height="519" src="https://ictguru.nl/wp-content/uploads/2020/04/outofmem.png" alt="" class="wp-image-72" srcset="https://ictguru.nl/wp-content/uploads/2020/04/outofmem.png 702w, https://ictguru.nl/wp-content/uploads/2020/04/outofmem-300x222.png 300w" sizes="(max-width: 702px) 100vw, 702px" /></figure>
+  <figure class="alignleft size-large"><img loading="lazy" width="702" height="519" src="https://ictguru.nl/wp-content/uploads/2020/04/outofmem.png"/></figure>
 </div>
 
 Now on to the experiment, i decided to boot the server for the fun with 4GB of ram. It booted just fine, that was until i tried to log into the server. I could not access it via RDP, only the Hyper-V native console. After that i decided to check the server memory. The server was asking about 6GB of non-existant RAM.
