@@ -5,7 +5,7 @@ title: "Flashing Sophos AP55 with OpenWrt"
 date: 2022-01-07T10:58:37+01:00
 categories: [Linux, openwrt]
 description: "Flashing a Sophos accesspoint to install OpenWrt."
-image: /assets/images/openwrt.png
+image: assets/images/openwrt.png
 ---
  
 

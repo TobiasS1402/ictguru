@@ -5,7 +5,7 @@ title: "Sysprepped server not automatically AzureAD joined"
 date: 2020-04-21T20:04:29+02:00
 categories: [Microsoft]
 description: "Troubleshooting a problematic syspres problem due to crypto keys"
-image: /assets/images/azuread.png
+image: assets/images/azuread.png
 ---
 
 Around the start of the corona crisis a client of ours needed a big upgrade for his RDS farm. The current farm existed of 5 RD servers and 1 gateway. We would sysprep 5 servers for a total of 10 RD servers.

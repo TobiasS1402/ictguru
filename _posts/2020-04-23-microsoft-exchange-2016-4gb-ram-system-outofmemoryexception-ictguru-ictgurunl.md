@@ -5,7 +5,7 @@ title: "Exchange 2016 with 4GB RAM"
 date: 2020-04-23T22:01:46+02:00
 categories: [Microsoft]
 description: "Trying to get Exchange 2016 running with 4GB of RAM"
-image: /assets/images/exchange.jpg
+image: assets/images/exchange.jpg
 
 ---
 I was doing some exercises for school with exchange server 2016 when i had a fun idea, i was wondering what would happen with 4gb of RAM. The bare minimun is 8GB of ram to get past the prerequisites. On 8GB it ran quite well, so i wondered: what would happen? what **could** happen?
