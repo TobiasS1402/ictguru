@@ -15,16 +15,23 @@ Flashing AP55 and AP55C to give them a new life with OpenWRT
 
   * Sophos AP
   * Multimeter
-  * <a href="https://www.amazon.de/-/nl/dp/B07TFSZ3ZP" target="_blank" rel="noreferrer noopener" title="https://www.amazon.de/-/nl/dp/B07TFSZ3ZP">USB To TTL</a>
-  * <a href="https://pjo2.github.io/tftpd64/" target="_blank" rel="noreferrer noopener" title="https://pjo2.github.io/tftpd64/">Computer with Tftpd64</a>
+  * [USB To TTL adapter](https://www.amazon.de/-/nl/dp/B07TFSZ3ZP)
+  * [A computer with Tftpd64](https://pjo2.github.io/tftpd64/)
 
 ## Getting started
 
-Open up your Access Point and locate the four TTL pins marked with the red square, you need the multimeter to indentify which pin is which. For this Board, the AP55C the order from left to right is 3.3v, ground, TX, RX. So you should only connect to the last 3 pins.
+Open up your Access Point and locate the four TTL pins marked with the red square, you need the multimeter to indentify which pin is which. For this Board, the AP55C the order from left to right is like this. You should only connect the last three pins (2,3,4).
+1.  _3.3v_
+2.  _ground_
+3.  _TX_
+4.  _RX_
 
 ![AccessPoint board](/assets/images/IMG_20211217_122259-1.jpg)
 
-As an example I have connected the blue, green and yellow wire to the board. Blue ground, Green TX on the board so RX on your USB, and yellow RX on the board so TX on your USB.
+As an example I have connected the blue, green and yellow wire to the board. 
+- Blue: ground
+- Green: TX on the board so RX on your USB
+- Yellow: RX on the board so TX on your USB
 
 ![AccessPoint board with connected TTL](/assets/images/IMG_20211217_175909.jpg)
 
@@ -32,11 +39,11 @@ As an example I have connected the blue, green and yellow wire to the board. Blu
 
 Now once you're connected install the right drivers for the TTL USB, just have a look around the internet. Start your putty client, check which COM device has been assigned to the USB by windows and set the speed to 115200. After opening the session start the access point by plugging in the power cord and keep pressing a random keyboard key to interupt the boot sequence of U-BOOT.
 
-On the Openwrt forum there is a link to images for the AP55 and AP100 series, download the correct image for your device via <a href="https://forum.openwrt.org/t/sophos-ap55-support/39965/56" target="_blank" rel="noreferrer noopener" title="https://forum.openwrt.org/t/sophos-ap55-support/39965/56">this url</a> and download a squashfs-sysupgrade image. Start your TFTPD64 program, connect a ethernet cable from your device to the accesspoint and give your NIC 192.168.99.8/24 as IP. Set the TFTPD64 DHCP server with a pool starting at 192.168.99.9 so your AP is the 99.9. 
+On the Openwrt forum there is a link to images for the AP55 and AP100 series, download the correct image for your device via [this url](https://forum.openwrt.org/t/sophos-ap55-support/39965/56) and download a squashfs-sysupgrade image. Start your TFTPD64 program, connect a ethernet cable from your device to the accesspoint and give your NIC 192.168.99.8/24 as IP and subnetmask. Set the TFTPD64 DHCP server with a pool starting at 192.168.99.9 so your AP is the 99.9. 
 
-Create a directory for your TFTP server and rename your openwrt image to "uImage_AP55", then following <a href="https://community.sophos.com/sophoswireless/f/discussions/87906/sophos-wlan-ap55-firmware-recover---howto-unbrick-your-sophos-ap/389552" title="https://community.sophos.com/sophoswireless/f/discussions/87906/sophos-wlan-ap55-firmware-recover---howto-unbrick-your-sophos-ap/389552" target="_blank" rel="noreferrer noopener">this guide</a> enter the following commands: 
+Create a directory for your TFTP server and rename your openwrt image to "uImage_AP55", then following [this guide](https://community.sophos.com/sophoswireless/f/discussions/87906/sophos-wlan-ap55-firmware-recover---howto-unbrick-your-sophos-ap/389552) enter the following commands: 
 
-```
+```shell
 ath> tftpboot
 
 Speed is 1000T
@@ -66,7 +73,7 @@ Bytes transferred = 7132091 (6cd3bb hex)
 
 Once your image has been uploaded the flash memory has to be erased and overwritten for the image to be bootable. In this case the `Load address: 0x81000000` is the HEX address for the image. Do the following to see information about what to remove:
 
-```
+```shell
 ath> bdinfo
 
 boot_params = 0x87F7BFB0
@@ -104,11 +111,11 @@ First 0x7 last 0xff sector size 0x10000       255
 Erased 249 sectors
 ```
 
-Now we have to put the Openwrt image at the TFTP address in the space where U-BOOT wants to find the image. Which is  `` `0x9F000000`, we need the TFTP address which is `0x81000000` and we need the size `Bytes transferred = 7132091 (6cd3bb hex).`
+Now we have to put the Openwrt image at the TFTP address in the space where U-BOOT wants to find the image. Which is `0x9F000000`, we need the TFTP address which is `0x81000000` and we need the size `Bytes transferred = 7132091 (6cd3bb hex).`
 
 So you can execute the following command with the above information:
 
-```
+```shell
 ath> cp.b 0x81000000 0x9f070000 0x6cd3bb
 
 Copy to Flash...
@@ -118,4 +125,4 @@ Copy to Flash...
 Done
 ```
 
-It has been done, your OpenWrt image has been flashed onto the Sophos AP. You can now boot the device with a simple boot command. Have fun!
+It has been done, your OpenWrt image has been flashed onto the Sophos AP. You can now (re)boot the device with a simple boot command. Have fun!

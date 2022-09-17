@@ -4,6 +4,8 @@ title: About
 permalink: /about
 ---
 
+Hello and welcome, I am Tobias and this blog is being hosted with thanks to GitHub pages.
+
 ### Technologies that keep me busy
 - 🔥🧱 PFsense
 - 🖥 Proxmox
@@ -15,6 +17,6 @@ permalink: /about
 - 🦺 Nginx reverse proxy
 - 🦈TrueNAS
 
-### My Stuff
-* [Github](https://github.com/TobiasS1402){:target="_blank"}
-* [LinkedIn](https://linkedin.com/in/tseijs){:target="_blank"}
+### My links
+* [Github](https://github.com/TobiasS1402)
+* [LinkedIn](https://linkedin.com/in/tseijs)
