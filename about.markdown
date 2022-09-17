@@ -16,4 +16,4 @@ permalink: /about/
 
 ### My Stuff
 * [Github](https://github.com/TobiasS1402){:target="_blank"}
-* [LinkedIn](www.linkedin.com/in/tseijs){:target="_blank"}
+* [LinkedIn](https://linkedin.com/in/tseijs){:target="_blank"}

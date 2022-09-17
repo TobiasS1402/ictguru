@@ -1,16 +1,11 @@
 ---
-id: 220
-title: Flashing Sophos AP55 with OpenWrt
-date: 2022-01-07T10:58:37+01:00
-author: gurutobias
 layout: post
-guid: https://ictguru.nl/?p=220
-permalink: /flashing-sophos-ap55-with-openwrt/
-image: /wp-content/uploads/2022/01/external-content.duckduckgo.com_.png
-categories:
-  - Linux
-  - OpenWRT
-  - Sophos
+author: tobias
+title: "Flashing Sophos AP55 with OpenWrt"
+date: 2022-01-07T10:58:37+01:00
+categories: [Linux, openwrt]
+description: "Flashing a Sophos accesspoint to install OpenWrt."
+image: /assets/images/openwrt.png
 ---
  
 

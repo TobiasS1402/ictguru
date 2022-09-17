@@ -1,14 +1,11 @@
 ---
-id: 160
-title: Windows Admin Center (WAC) ACME certificates with PFsense
-date: 2021-08-06T18:18:42+02:00
-author: gurutobias
 layout: post
-guid: https://ictguru.nl/?p=97
-permalink: /wac-acme-pfsense-ictguru-freenas-pfx-certificates-windows-admin-center-ictguru-ict-guru/
-image: /wp-content/uploads/2021/08/ssdsdasd.png
-categories:
-  - Microsoft
+author: tobias
+title: "Windows Admin Center (WAC) ACME certificates with PFsense"
+date: 2021-08-06T18:18:42+02:00
+categories: [Microsoft, Pfsense]
+description: "Running Windows Admin Center with ACME certificates from PFsense."
+image: /assets/images/ssdsdasd.png
 ---
 In this guide I will show you how to setup automatic certificate renewal for Windows Admin Center (WAC) with the PFsense ACME package. The starting requirement for this guide is that you have already setup the ACME solution within PFsense, if not you can use <a href="https://blog.vonhewitt.com/2017/08/using-pfsenses-acme-package-to-generate/" target="_blank" rel="noreferrer noopener nofollow">this guide</a>.
 

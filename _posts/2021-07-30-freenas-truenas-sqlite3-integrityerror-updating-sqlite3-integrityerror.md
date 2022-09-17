@@ -1,14 +1,11 @@
 ---
-id: 89
-title: sqlite3.IntegrityError | Upgrading FreeNAS 11.3-U7 to TrueNas Core 12.4-U4
-date: 2021-07-30T18:37:36+02:00
-author: gurutobias
 layout: post
-guid: https://ictguru.nl/?p=89
-permalink: /freenas-truenas-sqlite3-integrityerror-updating-sqlite3-integrityerror/
-image: /wp-content/uploads/2021/07/tn-core-logo.png
-categories:
-  - TrueNas
+author: tobias
+title: "sqlite3.IntegrityError | Upgrading FreeNAS 11.3-U7 to TrueNAS Core 12.4-U4"
+date: 2021-07-30T18:37:36+02:00
+categories: [TrueNas]
+description: "Troubleshooting sqlite integrity errors while upgrading FreeNAS to TrueNAS"
+image: /assets/images/tn-core-logo.png
 ---
 During my upgrade of FreeNAS i encountered a sqlite3.IntegrityError stopping a active database upgrade. I will show you how to fix it and upgrade to TrueNAS.
 
