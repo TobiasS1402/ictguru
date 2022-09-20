@@ -6,7 +6,7 @@ logo: 'assets/images/favicon.png'
 favicon: 'assets/images/favicon.png'
 github_username:  TobiasS1402
 linkedin_username: tseijs
-url: "https://v2.ictguru.nl"
+url: "https://www.ictguru.nl"
 comments: false
 baseurl: ""
 include: ["_pages"]
